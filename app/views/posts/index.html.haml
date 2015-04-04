@@ -1,12 +1,14 @@
+.navbar
+  = link_to "New", new_post_path, class: 'btn btn-primary btn-lg'
+  = link_to "log Out", destroy_user_session_path, method: :delete, class:'btn'
 - @posts.each do |post|
-  = post.photo
-  %strong
+  .post
+    = image_tag post.photo, size: '400x400'
+    %strong
     = post.title
-  %strong
+    %strong
     = post.content
-  %strong
-    = post.user_id
-  = link_to "Edit", edit_post_path(post.id), class: 'btn btn-success'
-  = link_to 'Show', post_path(post.id),  class: 'btn btn-warning'
-  = link_to 'Destroy', post_path(post.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
-= link_to "New", new_post_path, class: 'btn btn-primary btn-lg'
+    %strong
+    = link_to "Edit", edit_post_path(post.id), class: 'btn btn-success'
+    = link_to 'Show', post_path(post.id),  class: 'btn btn-warning'
+    = link_to 'Destroy', post_path(post.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
