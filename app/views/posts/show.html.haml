@@ -9,6 +9,12 @@
 %p
   %b Content:
   = @post.content
+%p
+  = link_to "like", like_post_path(@post), method: :get
+  = link_to "dislike", dislike_post_path(@post), method: :get
+%p
+  %p=@post.get_upvotes.size
+  %p=@post.get_downvotes.size
 
 = link_to 'Edit', edit_post_path(@post)
 \|
