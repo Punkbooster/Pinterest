@@ -18,26 +18,34 @@
  @import "bootstrap";
 .navbar{
 	padding:2em;
-
 }
+
+
 .post{
+	
+	box-shadow: 0 0 25px grey;
 	position: relative;
 	float:left;
-	width:400px;
-	margin-left:15px;
+	width:300px;
+	margin-left:120px;
 	margin-bottom: 30px;
 }
-.well{
-	padding-top:20px;
-	padding-bottom:20px;
-	padding-right:0px;
-	padding-left:0px;
-	width:402px;
-}
+
 
 .panel.panel-primary{
 	margin-top: 20px;
 }
 .panel-heading{
 	font:30px Tahoma;
+}
+
+.panel.panel-success{
+	margin-bottom: 2px;
+}
+
+.btn.btn-default:active{
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background-color:#E7E7E7;
+    padding:15 15 15 15px;
+    margin:15 15 15 15px;
 }

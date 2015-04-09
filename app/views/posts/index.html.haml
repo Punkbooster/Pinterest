@@ -1,13 +1,12 @@
 - @posts.each do |post|
   .post
-    .well
-      = image_tag post.photo, size: '400x400'
-      .panel.panel-primary
-        .panel-heading 
-          = post.title
-        .panel-footer 
-          = post.content
-      %strong
-      = link_to "Edit", edit_post_path(post.id), class: 'btn btn-success'
-      = link_to 'Show', post_path(post.id),  class: 'btn btn-warning'
-      = link_to 'Destroy', post_path(post.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+    .image
+      = image_tag post.photo, size: '300x300'
+    .panel.panel-success
+      .panel-heading 
+        = post.title
+      .panel-footer 
+        = post.content    
+    = link_to "Edit", edit_post_path(post.id), class: 'btn btn-default'
+    = link_to 'Show', post_path(post.id),  class: 'btn btn-default'
+    = link_to 'Destroy', post_path(post.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default'
