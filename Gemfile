@@ -24,7 +24,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
-gem 'bootstrap'
 gem 'bootstrap-sass', '~> 3.3.4.1'
 gem 'carrierwave', '~> 0.10.0'
 gem 'acts_as_votable', '~> 0.10.0'
