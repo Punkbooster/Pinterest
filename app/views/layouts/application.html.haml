@@ -9,17 +9,17 @@
     %nav.navbar.navbar-default
       .container-fluid
         .navbar-header
-          %a.navbar-brand{:href => "http://localhost:3000/posts/"} Pinterest
+          %a.navbar-brand{:href => posts_path} Pinterest
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li.active
-              %a{:href => "http://localhost:3000/posts/new"}
+              %a{:href => new_post_path}
                 New Post
                 %span.sr-only (current) 
           %form.navbar-form.navbar-left
             = form_tag(posts_path, :method => "get", id: "search-form") do
               = text_field_tag :search, params[:search], placeholder: "Search"
-              = submit_tag "Search", :name => nil, class: 'btn btn-default'
+              = submit_tag "Search", :name => nil
           %ul.nav.navbar-nav.navbar-right
             -if !user_signed_in?
               %li
